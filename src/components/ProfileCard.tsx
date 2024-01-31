@@ -1,3 +1,4 @@
+"use client";
 import appwriteService from '@/appwrite/config'
 import { Models } from 'appwrite'
 import React, { useEffect, useState } from 'react'

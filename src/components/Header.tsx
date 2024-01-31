@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import useAuth from "@/context/useAuth";
 import Link from "next/link";
 import React from "react";
@@ -11,22 +11,31 @@ const menuItems = [
     },
     {
         name: "About",
-        href: "#",
+        href: "/about",
     },
     {
         name: "Contact",
-        href: "#",
+        href: "/contact",
     },
 ];
 
 export default function Header() {
     const { authStatus } = useAuth();
     return (
-        <div className="relative w-full bg-white py-2">
+        <div className="relative w-full bg-white">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
                 <div className="inline-flex items-center space-x-2">
                     <Link href={"/"} className="inline-block w-full max-w-[150px]">
-                        <Logo />
+                    <img
+                      src="https://res.cloudinary.com/shaidislam/image/upload/v1704099883/apki3mddt2s8btqwr49s.png"
+                      className="mr-3 h-12 dark:hidden" 
+                      alt="Logo"
+                  />
+                  <img
+                      src="https://res.cloudinary.com/shaidislam/image/upload/v1704099884/bsaiaiaoisor2lkwgdi6.png"
+                      className="mr-3 h-12 hidden dark:block" 
+                      alt="Logo"
+                  />
                     </Link>
                 </div>
                 <div className="hidden grow items-start lg:flex">
