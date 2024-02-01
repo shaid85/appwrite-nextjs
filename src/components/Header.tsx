@@ -2,7 +2,6 @@
 import useAuth from "@/context/useAuth";
 import Link from "next/link";
 import React from "react";
-import Logo from "./Logo";
 
 const menuItems = [
     {
