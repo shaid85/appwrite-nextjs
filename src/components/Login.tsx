@@ -30,7 +30,7 @@ const Login = () => {
 
   return (
     <div className="flex items-center justify-center ">
-      <div className="mx-auto w-full max-w-lg bg-gray-200/50 rounded-xl p-10">
+      <div className="form mx-auto w-full max-w-lg rounded-xl p-10">
           <h2 className="text-center text-2xl font-bold leading-tight text-black">
           Sign in to your account 
           </h2>
@@ -53,7 +53,7 @@ const Login = () => {
                             </label>
                             <div className="mt-2">
                                 <input
-                                    className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="flex h-10 w-full rounded-md border border-gray-300 px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                                     type="email"
                                     value={formData.email}
                                     onChange={(e) =>
@@ -73,7 +73,7 @@ const Login = () => {
                             </div>
                             <div className="mt-2">
                                 <input
-                                    className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="flex h-10 w-full rounded-md border border-gray-300 px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                                     type="password"
                                     placeholder="Password"
                                     value={formData.password}

@@ -5,6 +5,7 @@ import Blog from '@/components/Blog'
 import Header from '@/components/Header'
 import { AuthProvider } from '@/context/authContext'
 import Footer from '@/components/Footer'
+import { ThemeProvider } from 'next-themes'
 
 
 export default function ProtectedLayout({
@@ -44,9 +45,11 @@ export default function ProtectedLayout({
                     <Blog blur />
                 </div>
             </div>
-            <Header />
-            <main className="px-2 py-4">{children}</main>
-            <Footer />
+            <ThemeProvider attribute='class' defaultTheme='light'>
+                <Header />
+                    <main className="px-4 py-4 theme">{children}</main>
+                <Footer />
+            </ThemeProvider>
         </>
     )}
 </AuthProvider>

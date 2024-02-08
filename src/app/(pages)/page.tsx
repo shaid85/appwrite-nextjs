@@ -7,7 +7,7 @@ import React from 'react'
 function Home() {
   const {authStatus} = useAuth();
   return (
-      <div className="w-full max-w-7xl mx-auto px-8">
+      <div className="w-full max-w-7xl mx-auto px-2">
           <div className="flex flex-wrap -mx-2 mt-32 gap-y-8">
               <div className="w-full sm:w-1/2 px-2 flex justify-center flex-wrap items-center">
                   <div className="relative text-center w-full flex justify-center flex-wrap">

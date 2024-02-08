@@ -2,6 +2,7 @@
 import useAuth from "@/context/useAuth";
 import Link from "next/link";
 import React from "react";
+import ThemeToggler from "@/components/ThemeToggler"
 
 const menuItems = [
     {
@@ -21,8 +22,8 @@ const menuItems = [
 export default function Header() {
     const { authStatus } = useAuth();
     return (
-        <div className="relative w-full bg-white">
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+        <div className="relative w-full bg-white dark:bg-slate-900 dark:text-white">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 ">
                 <div className="inline-flex items-center space-x-2">
                     <Link href={"/"} className="inline-block w-full max-w-[150px]">
                     <img
@@ -43,7 +44,7 @@ export default function Header() {
                             <li key={item.name}>
                                 <Link
                                     href={item.href}
-                                    className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-primary"
+                                    className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-primary dark:text-white"
                                 >
                                     {item.name}
                                 </Link>
@@ -65,6 +66,7 @@ export default function Header() {
                         {authStatus ? "Logout" : "Log In"}
                     </Link>
                 </div>
+                <ThemeToggler />
             </div>
         </div>
     );

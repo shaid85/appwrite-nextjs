@@ -6,14 +6,13 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --input-bg: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 body {
@@ -24,4 +23,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+.form {
+  @apply bg-gray-200/50 dark:bg-white/80;
+}
+input,textarea {
+  @apply  bg-transparent dark:bg-white/30 dark:text-slate-900;
+}
+.theme {
+  @apply text-gray-900 dark:text-white;  
 }
