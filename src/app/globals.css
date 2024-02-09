@@ -15,6 +15,7 @@
   --background-end-rgb: 0, 0, 0;
 }
 
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -32,4 +33,17 @@ input,textarea {
 }
 .theme {
   @apply text-gray-900 dark:text-white;  
+}
+/* mobile menu */
+.max-h-0p .lucide-menu  {
+  @apply rotate-0 scale-100 transition-all
+}
+.max-h-0p .lucide-x  {
+  @apply rotate-90 scale-0 transition-all
+}
+.max-h-40p .lucide-menu  {
+  @apply -rotate-90 scale-0
+}
+.max-h-40p .lucide-x  {
+  @apply -rotate-0 scale-100
 }
